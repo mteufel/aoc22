@@ -4,12 +4,13 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 )
 
 func Aufgabe2() {
 	inputFile, err := os.Getwd()
-	inputFile = inputFile + "/day1/input.txt"
+	inputFile = inputFile + "/day1/input2.txt"
 	CheckError(err)
 
 	readFile, err := os.Open(inputFile)
@@ -39,9 +40,11 @@ func Aufgabe2() {
 			c, err := strconv.Atoi(line)
 			CheckError(err)
 			calories = calories + c
-			fmt.Println("-> " + strconv.Itoa(calories))
 		}
 	}
-	fmt.Println("Max Calories: " + strconv.Itoa(maxCalories))
+	sorted = append(sorted, calories)
+	fmt.Println("Max Calories Aufgabe 1=" + strconv.Itoa(maxCalories))
+	sort.Sort(sort.Reverse(sort.IntSlice(sorted)))
 	fmt.Println(sorted)
+	fmt.Println("Result Aufgabe 2=" + strconv.Itoa(sorted[0]+sorted[1]+sorted[2]))
 }

@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	Aufgabe1()
+	//Aufgabe1()
 	Aufgabe2()
 }
 
