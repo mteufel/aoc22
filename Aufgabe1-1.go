@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func Aufgabe1() {
+func Aufgabe11() {
 
 	inputFile, err := os.Getwd()
 	inputFile = inputFile + "/day1/input.txt"

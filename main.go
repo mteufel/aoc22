@@ -1,8 +1,9 @@
 package main
 
 func main() {
-	//Aufgabe1()
-	Aufgabe2()
+	//Aufgabe11()
+	//Aufgabe12()
+	Aufgabe8()
 }
 
 func CheckError(e error) {
